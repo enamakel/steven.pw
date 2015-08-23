@@ -1,0 +1,19 @@
+extends defaultLayout.jade
+
+block header
+  block defs
+    meta(name="description", content="My blog. A place for me to store and share the knowledge that I have learnt and discovered.")
+  title= "Steven Enamakel"
+  style
+    include ../css/build/home.css
+
+block content
+  h1#page-title.font-supertitle Welcome
+  #container.col
+    p.text
+      | This website is meant to archive notes about things I find interesting.
+      | Stuff you find here are things that I have not bothered to share anywhere
+      | else, but just kept here for the sake of anyones interest.
+      | <br/><br/>
+      | You probably won't find anything useful here with that being said.
+      | But you're free to roam around site by choosing a link from the header.

@@ -1,0 +1,72 @@
+@import
+	"_normalize",
+	"global/functions",
+	"global/properties",
+	"global/basicStyles",
+	"global/font",
+	"_header";
+
+body {
+	background: #FFF;
+
+	article {
+		margin: 10px auto;
+		width: 100%;
+		// max-width: 650px;
+
+		a, a:visited, a:active{
+			border-bottom: 1px solid #00B4CC;
+			text-decoration: none;
+
+			&:hover {
+				border-bottom: 2px solid #00B4CC;
+			}
+		}
+		b, blockquote { color: #000; }
+		blockquote {
+			border-left: #000 2px solid;
+			padding-left: 20px;
+			margin-left: 0;
+		}
+		p {
+			@extend .font-text;
+			@include clearfix();
+			margin: 1.6em 0;
+		}
+		ul, li { padding: 0; }
+		ul {
+			margin: 20px 0;
+
+			li {
+				margin-bottom: 30px;
+
+				.head {
+					@extend .font-title;
+					color: #000;
+				}
+				.text {
+					padding-top: 10px;
+					padding-left: 20px;
+				}
+			}
+		}
+		img { max-width: 100%; }
+		#a-title {padding: 10px;}
+		#a-meta {
+			@include clearfix();
+			border-top: 1px solid #000;
+			// font-size: 12px;
+			padding-bottom: 40px;
+			padding: 10px;
+
+			span { float: right; }
+		}
+
+		@media screen and (max-width: $mobileLimit) {
+			#a-content { font-size: 1em; }
+			#a-meta span, #a-author {
+				font-size: 1em !important;
+			}
+		}
+	}
+}

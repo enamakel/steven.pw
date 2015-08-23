@@ -1,0 +1,8 @@
+css/build
+drafts
+Guardfile
+node_modules
+.sass-cache
+*.sublime-project
+*.sublime-workspace
+public/**/*.html

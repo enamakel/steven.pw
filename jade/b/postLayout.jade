@@ -1,0 +1,23 @@
+extends ../defaultLayout.jade
+
+block header
+  block defs
+  meta(name="description", content=description)
+  title= pageTitle + " | Steven Enamakel"
+  style
+    include ../../css/build/blog-post.css
+
+block content
+  article
+    h1.text-center#a-title= pageTitle
+    #a-content.font-text
+      p.text-center= description
+      block article-content
+    #a-meta.font-text
+      span= date
+
+mixin photo(src, pageTitle)
+  .text-center
+    img(src= src)
+    b
+      div= pageTitle

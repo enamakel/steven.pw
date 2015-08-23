@@ -1,0 +1,219 @@
+alias c = "clear"
+alias cl = "clear"
+
+alias grep = "grep --color=auto"
+alias egrep = "egrep --color=auto"
+alias fgrep = "fgrep --color=auto"
+alias ls = "ls --color=auto"
+
+alias le = "less"
+alias hl = "less -R"
+alias md = "mkdir -p"
+alias oo = "open ."
+alias x = "exit"
+alias wget = "wget -c"
+alias h = "history"
+alias histg = "history | grep"
+alias j = "jobs -l"
+alias calc = "bc -l"
+alias ff = "find . -name"
+alias path = "echo -e ${PATH//:/\n}"
+alias now = "date +'%T'"
+alias nowtime = "now"
+alias nowdate = "date +'%d-%m-%Y'"
+alias edit = "vim"
+alias cut80 = "/usr/bin/cut -c 1-80" # shorten lines longer than 80 chars
+alias sha1 = "openssl sha1" # generate sha1 digest
+
+##  Apt-get aliases
+alias apg = "apt-get"
+alias apgr = "apt-get remove --purge -y"
+alias apgi = "apt-get install -y"
+alias apgr = "apt-get remove --purge -y"
+alias upgrade = "sudo apt-get update && sudo apt-get upgrade"
+
+alias diffd = "diff -rupN" # diff b/w directories
+alias patchd = "patch -p1 <" # apply patch to a directory
+
+alias rd = "rmdir"
+alias rma = "rm -rf * .*" # remove all files, including hidden files
+alias rmp = "shred -u -n 5 -vz" # removes a file permanently
+
+alias serve_this = "python -m SimpleHTTPServer" # start virutal server in the present directory
+These aliases require you to install 3rd party programs and they're really useful. There are more 3rd party aliases but they will be mentioned in other categories.
+
+alias afind = "ack-grep -il"
+alias battery = "acpi" # show battery status (laptops)
+alias bindump = "xxd -b" # binary dump of files
+alias d = "dirs -v" # view recent directories
+alias diff = "colordiff"
+alias irc = "irssi"
+alias lynx = "lynx -accept_all_cookies"
+alias music = "cmus" # terminal music player
+alias note = "vim '` date +%-e-%b-%Y.note`'" # start a new note
+alias pst = "pstree | less" # view process tree
+alias sniff = "wireshark"
+alias v = "vim"
+alias xq = "galax-run" # XQuery parser
+
+alias web = "lynx" # terminal web-browser
+alias webx = "google-chrome" # gui web-browser
+alias browser = "webx"
+
+alias gruntw = "grunt watch"
+alias gw = "grunt watch"
+alias npmi = "npm install"
+alias backups = "cd /var/backups/"
+alias desk = "cd ~/Desktop"
+alias doc = "cd ~/Documents"
+alias docs = "cd ~/Documents"
+alias down = "cd ~/Downloads"
+alias home = "cd ~"
+alias logs = "cd /var/log"
+alias src = "cd /usr/src"
+alias www = "cd /var/www"
+
+##  some personal directory aliases
+alias drop = "cd ~/Dropbox"
+alias notes = "cd ~/Documents/notes/"
+alias proj = "cd ~/Projects"
+
+##  ls aliases
+alias l = "ls"
+alias lsa = "ls -lah"
+alias sl = "ls"
+
+##  3rd-party programs for more ls fun
+alias ll = "ll1"
+alias l1 = "tree --dirsfirst -ChFL 1"
+alias l2 = "tree --dirsfirst -ChFL 2"
+alias l3 = "tree --dirsfirst -ChFL 3"
+alias ll1 = "tree --dirsfirst -ChFupDaL 1"
+alias ll2 = "tree --dirsfirst -ChFupDaL 2"
+alias ll3 = "tree --dirsfirst -ChFupDaL 3"
+alias lsd = "ncdu"
+
+##  cd aliases
+alias .. = "cd .."
+alias ... = "cd ../.."
+alias .... = "cd ../../.."
+alias ..2 = "cd ../.."
+alias ..3 = "cd ../../.."
+alias ..4 = "cd ../../../.."
+alias ..5 = "cd ../../../.."
+alias cd..... = "cd ../../../.."
+alias cd.... = "cd ../../.."
+alias cd... = "cd ../.."
+alias cd.. = "cd .."
+alias cd/ = "cd /"
+
+alias shortcuts = "vim ~/.aliases; source ~/.aliases"
+alias re = "source ~/.aliases" # reload all the aliases
+
+alias bashrc = "vim ~/.bashrc"
+alias vimrc = "vim ~/.vimrc"
+alias zshrc = "vim ~/.zshrc"
+
+alias apt-get = "sudo apt-get"
+alias chkconfig = "sudo sysv-rc-conf"
+alias ifconfig = "sudo ifconfig"
+alias iptables = "sudo iptables"
+alias mount = "sudo mount"
+alias nmap = "sudo nmap"
+alias root = "sudo su"
+alias service = "sudo service"
+alias synaptic = "sudo synaptic"
+alias svim = "sudo vim"
+alias umount = "sudo umount"
+alias wireshark = "sudo wireshark"
+alias reboot = "sudo reboot"
+alias poweroff = "sudo poweroff"
+alias halt = "sudo halt"
+alias shutdown = "sudo shutdown -P now"
+
+alias df = "df -Tha --total"
+alias du = "du -ach | sort -h"
+alias meminfo = "free -m -l -t"
+alias psmem = "ps auxf | sort -nr -k 4"
+alias psmem10 = "ps auxf | sort -nr -k 4 | head -10"
+alias pscpu = "ps auxf | sort -nr -k 3"
+alias pscpu10 = "ps auxf | sort -nr -k 3 | head -10"
+alias cpuinfo = "lscpu"
+alias gpumeminfo = "grep -i --color memory /var/log/Xorg.0.log"
+alias cpu_hogs = "ps wwaxr -o pid,stat,%cpu,time,command | head -10"
+alias mem_hogs = "ps wwaxm -o pid,stat,vsize,rss,time,command | head -10"
+
+alias ping8 = "ping 8.8.8.8" # ping google's dns servers
+alias ipt = "iptables"
+alias iptlist = "iptables -L -n -v --line-numbers"
+alias iptlistfw = "iptables -L FORWARD -n -v --line-numbers"
+alias iptlistin = "iptables -L INPUT -n -v --line-numbers"
+alias iptlistout = "iptables -L OUTPUT -n -v --line-numbers"
+alias firewall = "iptlist"
+
+##  SSH services
+alias ssh-start = "service ssh start"
+alias ssh-stop = "service ssh stop"
+alias ssh-restart = "ssh-stop; ssh-start"
+
+##  TOR services
+alias tor-start = "service tor start"
+alias tor-stop = "service tor stop"
+alias tor-restart = "tor-stop; tor-start"
+
+##  Web-server services
+alias web-start = "service nginx start; service php5-fpm start; service mysql start; service mongodb start"
+alias web-stop = "service nginx stop; service php5-fpm stop; service mysql stop; service mongodb stop"
+alias web-restart = "web-stop; web-start"
+
+##  Xserver (desktop-gui) services
+alias xstart = "service lightdm start"
+alias xstop = "service lightdm stop"
+alias xrestart = "xstop; xstart"
+
+alias pcurl = "proxychains curl"
+alias pscp = "proxychains scp"
+alias pssh = "proxychains ssh"
+alias pweb = "proxychains lynx"
+alias pwebx = "proxychains firefox"
+
+alias g = "git"
+alias ga = "git add"
+alias gb = "git branch"
+alias gba = "git branch -a"
+alias gca = "git commit -v -a"
+alias gcl = "git clone"
+alias gcm = "git commit"
+alias gco = "git checkout"
+alias gcount = "git shortlog -sn"
+alias gcp = "git cherry-pick"
+alias git-svn-dcommit-push = "git svn dcommit && git push github master:svntrunk"
+alias glg = "git log --stat --max-count=5"
+alias glgg = "git log --graph --max-count=5"
+alias gpll = "git pull"
+alias gpnp = "git pull origin $(current_branch) && git push origin $(current_branch)"
+alias gpull = "git pull origin $(current_branch)"
+alias gpush = "git push origin $(current_branch)"
+alias gsd = "git svn dcommit"
+alias gsr = "git svn rebase"
+alias gst = "git status"
+alias gstg = "git stage"
+alias gup = "git fetch && git rebase"
+
+alias pm = "python manage.py"
+alias pmcats = "python manage.py convert_to_south"
+alias pmdm = "python manage.py datamigration"
+alias pmlf = "python manage.py loaddata fixtures/*"
+alias pmm = "python manage.py migrate"
+alias pmma = "python manage.py migrate --all"
+alias pmmf = "python manage.py migrate --fake"
+alias pmml = "python manage.py migrate --list"
+alias pmr = "python manage.py runserver"
+alias pmrp = "python manage.py runserver_plus"
+alias pmrpg = "pmrp --adminmedia=`pwd`/static/admin"
+alias pms = "python manage.py shell"
+alias pmsdb = "python manage.py syncdb"
+alias pmsi = "python manage.py schemamigration --initial"
+alias pmsm = "python manage.py schemamigration --auto"
+alias pmsp = "python manage.py shell_plus"
+alias pmt = "python -W ignore::DeprecationWarning manage.py test"

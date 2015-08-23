@@ -1,0 +1,85 @@
+extends postLayout.jade
+
+block defs
+  - var description= 'How to change your login prompt to a game of snake'
+  - var pageTitle = 'Terminal Snake login'
+  - var date= '2nd Feburary 2015'
+
+block article-content
+  p
+    | I'm a huge fan of the Backtrack OS. I loved especially how it had used the console to login.
+    | Which is why when I switched to Kali, I had disabled the GUI login and
+    | re-enable the console login just to get that old feel.
+  p
+    | But of course, just like in Backtrack, I would end up spending most of
+    | time in the GUI desktop than with TTYs. I must have probably entered "startx" more
+    | than a few thousand times now. It would make more sense for me to switch back to
+    | a GUI login, but I can't because I love starting from TTYs. It makes you
+    | look a programmer who's so hardcore even though you don't know shit.
+  p
+    | So I figured it might be a fun idea to make a snake game that would run where the
+    | login prompt would usually be, and have it start up my Desktop when the snake
+    | eats the fruit.
+
+  h2 And so I did
+  p
+    | I found a nice terminal snake game called <a href="https://github.com/alexdantas/nSnake">nSnake</a>, hacked it's code
+    | a bit, messed around with a few startup scripts in my machine and Voila!
+  p
+    | I now power on my machine, wait a second for it to boot up, play a game of
+    | snake and then watch it load my desktop along with my badass wallpaper of an ameoba.
+
+  h2 Now, isin't that way more insecure than a regular login prompt?
+  p
+    | Yes, well not exactly. The snake game launches the GUI, which usually brings up your
+    | familiar login screen (where you would click on your username and
+    | enter your password).
+  p
+    | However! you would want to bypass that and forget about your security just
+    | cause it's too damn cool to watch your desktop launch from a terminal snake game.
+  p
+    | Most login GUIs have a autologin feature which will automatically
+    | log you in and present your desktop. We shall use this feature.
+
+  h2 Setting up the snake game
+  p
+    | The game and it's source code can be found <a href="https://github.com/enamakel/nSnake">here</a>.
+    | Follow the instructions in the Readme file, as it contains step-by-step
+    | instuctions on what you should do to get the everything setup. Note that I
+    | have tested it only in a Linux system (OSX is still in question and Windows,
+    | well.... never mind).
+  p
+    | Once done, reboot your system and you should see the changes to take effect.
+
+  h2 Behind the gears
+  p
+    | The snake game is modified so that it loads an external program (which we specify)
+    | when the snake eats the fruit. We set the external program to be our GUI
+    | interface, which means the snake game launches the GUI interface when it eats the fruit.
+  p
+    | Then we disable the GUI from starting up automatically during boot, and instead
+    | have the snake game load up from boot. The snake game is loaded in TTY1, which
+    | is the default terminal that Linux switches to when there is no GUI taking over.
+
+  h2 Does this work for multiple users?
+  p
+    | Yes, if you did not disable the GUI's autologin feature, but no otherwise.
+  p
+    | Although, I wonder if someone can think of a way to create something where there
+    | will be different coloured fruits in the game so that each fruit would
+    | represent each user in the system.
+    | Having the snake eat a fruit that represnts a user, would cause it to load
+    | the desktop of that user. THAT, would be really fun in a multi-user system. (Of
+    | course keeping in mind, password prompts and the number of users).
+
+  h2 Contribute
+  p
+    | Finally, the most interesting part of this article to me.
+  p
+    | Linked <a href="https://github.com/enamakel/nSnake.git">here</a> again is the source
+    | code. It is open-sourced and I'm really excited to see some creative ideas come
+    | out of this.
+  p
+    | Maybe have more security, or some more games, or even some freaky
+    | digital music play on the background. The creative possibilities are just
+    | endless!

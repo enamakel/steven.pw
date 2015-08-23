@@ -1,0 +1,26 @@
+extends postLayout.jade
+
+block defs
+	- var pageTitle = 'And so it begins!'
+	- var description = 'A brief about how I designed this blog and what were my goals with it.'
+	- var date = '19th August 2014'
+
+block article-content
+	p Finally, with this post I start my contributions to the internet, which was something I really wanted to do for a long while. <br/><br/> I&#8217;m really excited to start this journey since this blog will be a representation of my work and passion. <br/><br/> This post in particular describes what methods I used to design this blog.
+
+	h2 Design
+	p <b>Minimalism.</b> No ads, no sidebars, no footers; The only thing there should be is the content, along with a minimal header for navigation. No sparky backgrounds, weird colours or any fancy JavaScript effects. Just pure clean CSS beauty.
+
+	h2 Backend
+	p <b>No CMS or any other blogging platform were used.</b> Yup, that's right. This blog is not running on Wordpress, Joomla or any another blogging platform. To me they were just too slow and full of unnecessary junk. <br> Instead, I created my blog so that it contained just static HTML files without any backend written for it. This meant that I would have to hardcode my links and contents to different pages to my site (eg the <i>blog homepage</i>) and make sure that these pages pretend as if there is some backend logic. <br/> So I wrote a script that take the content of my posts and using that information along with a bunch of templates, it would then generate all the static pages for my site (with the <i>'backend logic'</i> taken care of) which I would then upload to my server. Of course, this would mean that I would have to run this script every time I make a new blog post (to ensure that all the pages have the updated links and content), but it woudn't be too much of a hassle to me since I don't blog that often.
+
+	p <b> CSS code has been inlined in every page. </b> Ideally you would want to do this only if your code's size is so small, such that having the browser make another request for it, is much more slower than having the code directly injected into the page. <br/> In my case, the CSS code that I wrote was so tiny (8kb) such that making another request for just 8kb of data seemed unnecessary.
+
+	p Basically, the main goal I was trying to achieve is to create a blog that was both fast and beautiful.
+
+	//- h2 How were the files made?
+	//- p All the files were compilied using tools like <a href="http://gruntjs.com/">GruntJS</a> and <a href="https://www.npmjs.com/">npm</a>.
+	//- View the documentation of the site in it's github repo (linked <a href="https://github.com/st3ven/steven.pw/">here</a>) for a better rundown on how these tools are used.
+
+	h2 See you soon!
+	p And with that I end here and hope to see you in future posts :)
