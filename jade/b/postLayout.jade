@@ -9,12 +9,12 @@ block header
 
 block content
   article
-    h1.text-center#a-title= pageTitle
+    h1#a-title= pageTitle
     #a-content.font-text
-      p.text-center= description
+      p.description= description
+      #a-meta.font-text= date
       block article-content
-    #a-meta.font-text
-      span= date
+
 
 mixin photo(src, pageTitle)
   .text-center

@@ -1,79 +1,77 @@
 header {
-	float: left;
-	height: 250px;
-	padding: 15px 0 0 15px;
-	width: $headerWdth;
+  float: left;
+  height: 250px;
+  padding: 15px 0 0 15px;
+  width: $headerWdth;
 
-	#post-link, #blog-link {
-		font-size: 12px;
-		margin-right: 10px;
-		padding: 25px 0 0 0;
+  #post-link, #blog-link {
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 25px 0 0 0;
 
-		a {
-			color: #000;
-			text-decoration: none;
-		}
-		li {
-			margin: 2px 0;
-			padding: 4px;
-		}
-		li.item {
-			@include single-transition(background);
-			color: #000;
-			text-decoration: none !important;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    li {
+      margin: 2px 0;
+      padding: 4px;
+    }
+    li.item {
+      @include single-transition(background);
+      color: #000;
+      text-decoration: none !important;
 
-			&:hover {
-				background: #000;
-				color: #FFF;
-			}
-		}
-	}
-	#blog-link li.item {
-		line-height: 19px;
-	}
+      &:hover {
+        background: #000;
+        color: #FFF;
+      }
+    }
+  }
+  #blog-link li.item {
+    line-height: 19px;
+  }
 }
 
 #main-body {
-	// margin-left:#{$headerWdth + 30};
-	float: left;
-	line-height: 26px;
-	max-width: 700px;
+  // margin-left:#{$headerWdth + 30};
+  float: left;
+  line-height: 26px;
+  max-width: 700px;
 
-	padding: 30px;
-	padding-bottom: 0;
-	padding-right: 0;
+  padding: 30px 50px;
+  padding-bottom: 0;
+  padding-right: 0;
 }
 
 @media screen and (max-width: 990px) {
-	#main-body {
-		max-width: 550px;
-		padding: 10px;
-	}
+  #main-body {
+    max-width: 550px;
+  }
 }
 
 @media screen and (max-width: 750px) {
-	#main-body {
-		max-width: none;
-		margin: 0 !important;
-		padding: 0;
+  #main-body {
+    max-width: none;
+    margin: 0 !important;
+    padding: 10px !important;
 
-		p, h2, h1, h3 {
-			padding: 0 10px;
-		}
-		h1, #page-title {
-			line-height: 50px;
-			text-align: center;
-			font-size: 2.5rem;
-		}
-	}
+    p, h2, h1, h3 {
+      padding: 0 10px;
+    }
+    h1, #page-title {
+      line-height: 50px;
+      font-size: 2.5rem;
+    }
+  }
 
-	header {
-		padding: 50px 0;
-		padding-bottom: 25px;
-		margin-bottom: 50px;
-		text-align: center;
-		width: 100%;
-		height: auto;
-		border-bottom: 1px solid #000;
-	}
+  header {
+    padding: 50px 0;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #000;
+  }
 }

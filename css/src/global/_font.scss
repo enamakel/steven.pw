@@ -1,14 +1,16 @@
 /* Import Custom Google Fonts */
 @import url(http://fonts.googleapis.com/css?family=Bitter);
 @import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Cantarell);
 
 /* Define CSS font-specific classes */
 .font-bitter{font-family: 'Bitter', serif;}
 .font-oswald{font-family: 'Oswald', sans-serif;}
+.font-cantarell{font-family: "Cantarell", sans-serif}
 
 /* Define CSS text-specific classes */
-.font-text{@extend .font-bitter;}
-.font-title{@extend .font-bitter;}
+.font-text{@extend .font-cantarell;}
+.font-title{@extend .font-cantarell;}
 .font-supertitle{@extend .font-oswald;}
 
 /* Default page Font */
